@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './home_page.dart';
+import 'pages/home_page.dart';
+import 'pages/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +10,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      // home: HomePage(),
+      themeMode: ThemeMode.dark,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      darkTheme: ThemeData(
+        // brightness: Brightness.dark,
+        primarySwatch: Colors.grey,
+      ),
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+      },
     );
   }
+
+  bringVeg({required bool thaila, int rupess = 100}) {}
 }
