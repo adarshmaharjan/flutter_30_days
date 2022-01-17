@@ -1,4 +1,8 @@
+// flutter
 import 'package:flutter/material.dart';
+// google fonts
+import 'package:google_fonts/google_fonts.dart';
+// pages
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
 
@@ -11,9 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: HomePage(),
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        // textTheme: GoogleFonts.latoTextTheme(),
       ),
       darkTheme: ThemeData(
         // brightness: Brightness.dark,
@@ -27,5 +33,5 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  bringVeg({required bool thaila, int rupess = 100}) {}
+  // bringVeg({required bool thaila, int rupess = 100}) {}
 }
