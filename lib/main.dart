@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: HomePage(),
+      title: 'Codepur Tutorial',
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
@@ -26,9 +26,10 @@ class MyApp extends StatelessWidget {
         // textTheme: GoogleFonts.latoTextTheme(),
       ),
       darkTheme: ThemeData(
-        // brightness: Brightness.dark,
-        primarySwatch: Colors.grey,
+        brightness: Brightness.dark,
       ),
+      debugShowCheckedModeBanner: false,
+      // initialRoute: "/",
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
