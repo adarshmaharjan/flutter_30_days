@@ -1,0 +1,11 @@
+{
+    "product": [
+        {
+            "id": "Codepur001",
+            "name": "iPhone 12 pro",
+            "desc": "999",
+            "color": "#3305a",
+            "image": "imagelink"
+        }
+    ]
+}
