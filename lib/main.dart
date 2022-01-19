@@ -1,11 +1,14 @@
 // flutter
 import 'package:flutter/material.dart';
+// themes
+import 'package:flutter_application/widgets/themes.dart';
 // google fonts
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 // pages
 import 'pages/home_page.dart';
 // routes
 import './utils/routes.dart';
+// login page
 import 'pages/login_page.dart';
 
 void main() {
@@ -20,14 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Codepur Tutorial',
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        // textTheme: GoogleFonts.latoTextTheme(),
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       // initialRoute: "/",
       routes: {
@@ -37,6 +34,4 @@ class MyApp extends StatelessWidget {
       },
     );
   }
-
-  // bringVeg({required bool thaila, int rupess = 100}) {}
 }
